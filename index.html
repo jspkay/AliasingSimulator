@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="script.js"></script>
+    </head>
+    <body onload="start()">
+        <input type="range" id="freqSlider" style="width: 680px" min="0" max="500" value="0" onchange="aggiornaFrequenza()" />
+        <br><label>deltaF= </label>
+        <input type="input" id=f style="width: auto;" value=0 disabled />
+        <br>
+        <label>active:</label><input type="checkbox" id=state value="start/stop" onclick="startStopChekbox()" checked/>
+    </body>
+</html>
