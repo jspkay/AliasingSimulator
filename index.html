@@ -3,12 +3,32 @@
 <html>
     <head>
         <script src="script.js"></script>
+        <style>
+            p.aliasingTrue{
+                color:red;
+                background: #ff9f9f;
+            }
+        </style>
     </head>
-    <body onload="start()">
-        <input type="range" id="freqSlider" style="width: 680px" min="0" max="500" value="0" onchange="aggiornaFrequenza()" />
-        <br><label>deltaF= </label>
-        <input type="input" id=f style="width: auto;" value=0 disabled />
+    <body onload="start()" style="width: 640px;">
         <br>
-        <label>active:</label><input type="checkbox" id=state value="start/stop" onclick="startStopChekbox()" checked/>
+        <label>Frequenza della sinusoide: </label>
+        <input type="input" id=f style="width: auto;" value=1 onchange="aggiornaFrequenza('manual')" />
+        <br><label>Periodo della sinusoide: </label>
+        <input type="input" id=t style="width: auto;" value=1 onchange="aggiornaFrequenza('period')" />
+        <p id="valoriPermessi">Valori permessi: 0 - 5</p>
+        <input type="range" id="freqSlider" style="width: 100%" min="0" max="500" value="1" onchange="aggiornaFrequenza()" />
+        <br><label>precisione = </label>        
+        <input type="range" id="precision" style="width: 100px;" min=1 max=4 value=2 onchange="changePrecision()" />
+        <br>
+
+        <br><label>Periodo di campionamento: </label>
+        <input type="input" id=Tc style="width: auto;" value=1 onchange="cambiaCampionamento()" />
+        <br><label>Frequenza di campionamento: </label>
+        <input type="input" id=Fc style="width: auto;" value=1 onchange="cambiaCampionamento('freq')" />
+        <!--<input type=range id=campSlider style="width:100%" min=""
+        <br>
+        <!--<label>active</label><input type="checkbox" id=state value="start/stop" onclick="startStopChekbox()" checked/> -->
+        <p id=aliasing>ALIASING</p>
     </body>
 </html>
