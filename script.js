@@ -82,7 +82,7 @@ function update(){
         if(sin.fc > 2*sin.f){
             el = document.getElementById("aliasing");
             el.className = "aliasingFalse";
-            el.innerHTML = "NO Aliasing: questi punti possono essere interpolati per costruire il segnale corretto";
+            el.innerHTML = "NO Aliasing: questi punti possono essere usati per ricostruire il segnale corretto";
         }
         else{
             el = document.getElementById("aliasing");
